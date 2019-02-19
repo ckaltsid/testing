@@ -15,21 +15,31 @@
     </head>
 <body>
 <h1>Test</h1>
-Text<input type="text" id="keimeno" >
+Text<input type="text" id="keimeno"  onkeyup="LiveChange(this.value)">
 <button onclick="TextChange()">Go</button>
 <br>
 <p id ="demo"></p>
 </body>
 <script>
-        document.getElementById("demo").innerHTML = "My ";
+        //document.getElementById("demo").innerHTML = "My ";
         function TextChange() {
-        mytext = document.getElementById("keimeno").value;
-        document.getElementById("demo").innerHTML = mytext;
-        if (mytext.length > 10) {
-            document.getElementById("demo").style.fontSize = "30px";   
-        } else {
-            document.getElementById("demo").style.fontSize = "20px";   
+            mytext = document.getElementById("keimeno").value;
+            document.getElementById("demo").innerHTML = mytext;
+            if (mytext.length > 10) {
+                document.getElementById("demo").style.fontSize = "30px";   
+            } else {
+                document.getElementById("demo").style.fontSize = "20px";   
+            }
         }
-    }
+
+        function LiveChange() {
+            mytext = document.getElementById("keimeno").value;
+            document.getElementById("demo").innerHTML = mytext;
+            if (mytext.length > 10) {
+                document.getElementById("demo").style.fontSize = "30px";   
+            } else {
+                document.getElementById("demo").style.fontSize = "20px";   
+            }
+        }
 </script>
 </html>
