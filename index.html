@@ -1,8 +1,33 @@
 <html>
+    <head>
+            <style>
+                    body {
+                      background-color: linen;
+                    }
+                    
+                    #demo {
+                      color: maroon;
+                      margin-left: 40px;
+                      font-size: 20px;
+                    } 
+                    </style>  
+
+    </head>
 <body>
 <h1>Test</h1>
-<h2>Test 2</h2>
-<h3>Test 4</h3>
+Text<input type="text" id="keimeno" >
+<button onclick="TextChange()">Go</button>
+<br>
+<p id ="demo"></p>
 </body>
-
+<script>
+        document.getElementById("demo").innerHTML = "My ";
+        function TextChange() {
+        x = document.getElementById("keimeno").value;
+        document.getElementById("demo").innerHTML = x;
+        if (x.length > 10) {
+            document.getElementById("demo").style.fontSize = "30px";   
+        }
+    }
+</script>
 </html>
